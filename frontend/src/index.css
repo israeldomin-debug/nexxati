@@ -1,0 +1,500 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/**
+ * Estilos globais com foco em acessibilidade
+ * WCAG 2.1 AA compliant
+ */
+
+@layer base {
+  :root,
+  :root[data-theme='controlall'] {
+    --theme-accent: #0878e8;
+    --theme-accent-2: #20a4ff;
+    --theme-deep: #071426;
+    --theme-nav-start: #07111f;
+    --theme-nav-end: #0b315e;
+    --theme-soft: #eff8ff;
+    --theme-soft-border: #bae0ff;
+    --theme-soft-text: #075eb5;
+    --theme-glow: rgba(8, 120, 232, 0.18);
+    --theme-glow-soft: rgba(8, 120, 232, 0.08);
+  }
+
+  :root[data-theme='burgundy'] {
+    --theme-accent: #a82030;
+    --theme-accent-2: #df4b54;
+    --theme-deep: #50131c;
+    --theme-nav-start: #0f172a;
+    --theme-nav-end: #1e293b;
+    --theme-soft: #fff1f2;
+    --theme-soft-border: #fecdd3;
+    --theme-soft-text: #9f1239;
+    --theme-glow: rgba(190, 38, 52, 0.14);
+    --theme-glow-soft: rgba(190, 38, 52, 0.07);
+  }
+
+  :root[data-theme='black-red'] {
+    --theme-accent: #e11d48;
+    --theme-accent-2: #fb3c52;
+    --theme-deep: #09090b;
+    --theme-nav-start: #020617;
+    --theme-nav-end: #18181b;
+    --theme-soft: #fff1f2;
+    --theme-soft-border: #fda4af;
+    --theme-soft-text: #be123c;
+    --theme-glow: rgba(225, 29, 72, 0.16);
+    --theme-glow-soft: rgba(225, 29, 72, 0.07);
+  }
+
+  :root[data-theme='blue-orange'] {
+    --theme-accent: #f97316;
+    --theme-accent-2: #fb923c;
+    --theme-deep: #0c3b70;
+    --theme-nav-start: #071b33;
+    --theme-nav-end: #1756a3;
+    --theme-soft: #fff7ed;
+    --theme-soft-border: #fed7aa;
+    --theme-soft-text: #c2410c;
+    --theme-glow: rgba(249, 115, 22, 0.16);
+    --theme-glow-soft: rgba(37, 99, 235, 0.07);
+  }
+
+  :root[data-theme='teal-gold'] {
+    --theme-accent: #d6a632;
+    --theme-accent-2: #f1c75b;
+    --theme-deep: #0f3d46;
+    --theme-nav-start: #082f38;
+    --theme-nav-end: #0f766e;
+    --theme-soft: #fffbeb;
+    --theme-soft-border: #fde68a;
+    --theme-soft-text: #9a6c08;
+    --theme-glow: rgba(214, 166, 50, 0.16);
+    --theme-glow-soft: rgba(15, 118, 110, 0.07);
+  }
+
+  :root[data-theme='violet-pink'] {
+    --theme-accent: #ec4899;
+    --theme-accent-2: #f472b6;
+    --theme-deep: #312e81;
+    --theme-nav-start: #241f5e;
+    --theme-nav-end: #7c3aed;
+    --theme-soft: #fdf2f8;
+    --theme-soft-border: #fbcfe8;
+    --theme-soft-text: #be185d;
+    --theme-glow: rgba(236, 72, 153, 0.16);
+    --theme-glow-soft: rgba(124, 58, 237, 0.07);
+  }
+
+  * {
+    @apply antialiased;
+  }
+
+  html {
+    @apply scroll-smooth;
+    color-scheme: light;
+  }
+
+  body {
+    @apply bg-slate-50 text-slate-900;
+    min-height: 100vh;
+    font-family: Inter, "Segoe UI Variable", "Segoe UI", system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+    background:
+      radial-gradient(circle at 12% 8%, var(--theme-glow-soft), transparent 28rem),
+      radial-gradient(circle at 88% 86%, rgba(15, 23, 42, 0.06), transparent 34rem),
+      #f6f7f9;
+    transition: background-color 220ms ease;
+  }
+
+  :root[data-appearance='dark'] body {
+    color: rgb(226 232 240);
+    background:
+      radial-gradient(circle at 12% 8%, var(--theme-glow), transparent 30rem),
+      radial-gradient(circle at 88% 86%, rgba(30, 41, 59, 0.45), transparent 34rem),
+      #070d18;
+  }
+
+  :root[data-appearance='dark'] body::before { opacity: 0.025; filter: grayscale(1) brightness(1.4); }
+  :root[data-appearance='dark'] .bg-white,
+  :root[data-appearance='dark'] .bg-white\/95,
+  :root[data-appearance='dark'] .bg-white\/90,
+  :root[data-appearance='dark'] .bg-white\/80 { background-color: rgb(15 23 42 / 0.96) !important; }
+  :root[data-appearance='dark'] .bg-slate-50,
+  :root[data-appearance='dark'] .bg-gray-50,
+  :root[data-appearance='dark'] .bg-slate-50\/70,
+  :root[data-appearance='dark'] .bg-slate-50\/80 { background-color: rgb(17 27 46 / 0.9) !important; }
+  :root[data-appearance='dark'] .bg-slate-100 { background-color: rgb(30 41 59) !important; }
+  :root[data-appearance='dark'] .border-slate-100,
+  :root[data-appearance='dark'] .border-slate-200,
+  :root[data-appearance='dark'] .border-slate-300 { border-color: rgb(51 65 85) !important; }
+  :root[data-appearance='dark'] .text-slate-950,
+  :root[data-appearance='dark'] .text-slate-900,
+  :root[data-appearance='dark'] .text-slate-800,
+  :root[data-appearance='dark'] .text-gray-900,
+  :root[data-appearance='dark'] .text-gray-800 { color: rgb(241 245 249) !important; }
+  :root[data-appearance='dark'] .text-slate-700,
+  :root[data-appearance='dark'] .text-slate-600,
+  :root[data-appearance='dark'] .text-gray-700,
+  :root[data-appearance='dark'] .text-gray-600 { color: rgb(203 213 225) !important; }
+  :root[data-appearance='dark'] .text-slate-500,
+  :root[data-appearance='dark'] .text-slate-400,
+  :root[data-appearance='dark'] .text-gray-500 { color: rgb(148 163 184) !important; }
+  :root[data-appearance='dark'] input,
+  :root[data-appearance='dark'] select,
+  :root[data-appearance='dark'] textarea {
+    border-color: rgb(51 65 85) !important;
+    background-color: rgb(15 23 42 / 0.94) !important;
+    color: rgb(241 245 249) !important;
+  }
+  :root[data-appearance='dark'] input::placeholder,
+  :root[data-appearance='dark'] textarea::placeholder { color: rgb(100 116 139) !important; }
+  :root[data-appearance='dark'] .hover\:bg-slate-50:hover,
+  :root[data-appearance='dark'] .hover\:bg-slate-100:hover { background-color: rgb(30 41 59) !important; }
+
+  body::before {
+    content: '';
+    position: absolute;
+    inset: 0 0 auto;
+    height: min(100vh, 900px);
+    z-index: 0;
+    pointer-events: none;
+    background-image: url('/nexxati-icon-modern.svg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: min(62vw, 760px) auto;
+    opacity: 0.07;
+  }
+
+  #root {
+    position: relative;
+    z-index: 1;
+  }
+
+  @media (min-width: 1280px) {
+    body.app-sidebar-layout #root {
+      padding-left: 18rem;
+      padding-top: 4rem;
+    }
+  }
+
+  @media print {
+    body.app-sidebar-layout #root {
+      padding-left: 0 !important;
+      padding-top: 0 !important;
+    }
+  }
+
+  .min-h-screen.bg-gray-50,
+  .min-h-screen.bg-slate-50 {
+    background-color: transparent !important;
+  }
+
+  ::selection {
+    background: rgba(190, 38, 52, 0.18);
+    color: #450a0a;
+  }
+
+  button,
+  a,
+  input,
+  select,
+  textarea {
+    -webkit-tap-highlight-color: transparent;
+  }
+
+  /* Melhora o foco para navegação por teclado */
+  *:focus-visible {
+    @apply outline-none ring-2 ring-primary-500 ring-offset-2;
+  }
+
+  /* Remove outline padrão mas mantém para teclado */
+  *:focus:not(:focus-visible) {
+    outline: none;
+  }
+
+  /* Skip link para leitores de tela */
+  .skip-link {
+    @apply sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 focus:z-50;
+    @apply bg-primary-600 text-white px-4 py-2 rounded-md;
+  }
+}
+
+@layer components {
+  .premium-login {
+    --theme-accent: #0878e8;
+    --theme-accent-2: #20a4ff;
+    --theme-deep: #071426;
+    --theme-nav-start: #07111f;
+    --theme-nav-end: #0b315e;
+    --theme-soft-text: #075eb5;
+    --theme-glow: rgba(8, 120, 232, 0.18);
+    display: grid;
+    place-items: center;
+    background:
+      radial-gradient(circle at 22% 24%, var(--theme-glow), transparent 24rem),
+      radial-gradient(circle at 78% 78%, rgba(15, 23, 42, 0.1), transparent 30rem),
+      linear-gradient(145deg, #f8fafc 0%, #f1f3f6 48%, #f8fafc 100%);
+  }
+
+  .premium-login::before {
+    content: '';
+    position: fixed;
+    inset: 0;
+    pointer-events: none;
+    background-image:
+      linear-gradient(rgba(15, 23, 42, 0.025) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(15, 23, 42, 0.025) 1px, transparent 1px);
+    background-size: 48px 48px;
+    mask-image: linear-gradient(to bottom, black, transparent 82%);
+  }
+
+  .premium-login-card {
+    position: relative;
+    z-index: 1;
+  }
+
+  .premium-input {
+    outline: none;
+    transition: border-color 180ms ease, box-shadow 180ms ease, background-color 180ms ease;
+  }
+
+  .premium-input:hover {
+    border-color: rgb(203 213 225);
+    background-color: rgb(255 255 255 / 0.95);
+  }
+
+  .premium-input:focus {
+    border-color: var(--theme-accent);
+    background-color: white;
+    box-shadow: 0 0 0 4px var(--theme-glow);
+  }
+
+  .premium-hero {
+    background: linear-gradient(135deg, var(--theme-nav-start), var(--theme-nav-end) 62%, var(--theme-deep));
+  }
+
+  .premium-hero-glow {
+    background-color: var(--theme-accent);
+  }
+
+  .premium-primary-action {
+    background: linear-gradient(90deg, var(--theme-accent), var(--theme-accent-2));
+    box-shadow: 0 12px 26px -12px var(--theme-accent);
+  }
+
+  .premium-primary-action:hover {
+    filter: brightness(1.08);
+  }
+
+  .premium-accent-text {
+    color: var(--theme-soft-text);
+  }
+
+  .premium-accent-soft {
+    border-color: var(--theme-soft-border);
+    background-color: var(--theme-soft);
+    color: var(--theme-soft-text);
+  }
+
+  .premium-sidebar-accent {
+    background: linear-gradient(90deg, var(--theme-deep), var(--theme-accent), var(--theme-accent-2));
+  }
+
+  .premium-nav-active {
+    border-color: var(--theme-nav-start);
+    background: linear-gradient(90deg, var(--theme-nav-start), var(--theme-nav-end));
+  }
+
+  .premium-user-avatar {
+    background: linear-gradient(135deg, var(--theme-accent), var(--theme-accent-2));
+  }
+
+  .theme-picker-selected {
+    border-color: var(--theme-soft-border);
+    background-color: var(--theme-soft);
+  }
+
+  .theme-picker-check {
+    background-color: var(--theme-accent);
+  }
+
+  body.app-sidebar-layout main {
+    animation: premium-page-enter 220ms ease-out;
+  }
+
+  /*
+   * Fixed translucent layers and a retained transform on the complete page can
+   * make Chromium discard/rasterize large regions again during fast scrolling.
+   * Keep the premium translucency without forcing those permanent GPU layers.
+   */
+  .premium-sidebar,
+  .premium-topbar {
+    -webkit-backdrop-filter: none;
+    backdrop-filter: none;
+  }
+
+  .premium-sidebar {
+    background-color: rgb(248 250 252 / 0.98);
+  }
+
+  .premium-topbar {
+    background-color: rgb(255 255 255 / 0.98);
+  }
+
+  :root[data-appearance='dark'] body::before { opacity: 0.025; filter: grayscale(1) brightness(1.4); }
+  :root[data-appearance='dark'] .premium-sidebar { background-color: rgb(8 15 28 / 0.99); border-color: rgb(30 41 59); }
+  :root[data-appearance='dark'] .premium-topbar { background-color: rgb(8 15 28 / 0.99); border-color: rgb(30 41 59); }
+
+  .premium-skeleton {
+    position: relative;
+    overflow: hidden;
+    background: rgb(226 232 240);
+  }
+  .premium-skeleton::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    transform: translateX(-100%);
+    background: linear-gradient(90deg, transparent, rgb(255 255 255 / 0.65), transparent);
+    animation: premium-skeleton 1.35s infinite;
+  }
+  :root[data-appearance='dark'] .premium-skeleton { background: rgb(30 41 59); }
+
+  @keyframes premium-skeleton {
+    to { transform: translateX(100%); }
+  }
+
+  body.app-sidebar-layout main > div,
+  body.app-sidebar-layout main > section {
+    scroll-margin-top: 5.5rem;
+  }
+
+  .premium-sidebar nav {
+    scrollbar-width: thin;
+    scrollbar-color: rgba(100, 116, 139, 0.25) transparent;
+  }
+
+  .premium-metric-card {
+    position: relative;
+    overflow: hidden;
+  }
+
+  .premium-metric-card::before {
+    content: '';
+    position: absolute;
+    inset: 0 auto auto 0;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(90deg, var(--theme-accent), var(--theme-accent-2), transparent 78%);
+    opacity: 0.7;
+  }
+
+
+  .premium-filter-panel select,
+  .premium-discovery input:not([type='checkbox']):not([type='file']),
+  .premium-discovery select {
+    border-color: rgb(226 232 240);
+    border-radius: 0.75rem;
+    background-color: rgb(255 255 255 / 0.92);
+    box-shadow: 0 1px 2px rgb(15 23 42 / 0.04);
+    transition: border-color 180ms ease, box-shadow 180ms ease, background-color 180ms ease;
+  }
+
+  .premium-filter-panel select {
+    min-height: 3rem;
+    padding-left: 0.875rem;
+    padding-right: 2.25rem;
+  }
+
+  .premium-filter-panel select:hover,
+  .premium-discovery input:not([type='checkbox']):not([type='file']):hover,
+  .premium-discovery select:hover {
+    border-color: rgb(203 213 225);
+    background-color: white;
+  }
+
+  .premium-filter-panel select:focus,
+  .premium-discovery input:not([type='checkbox']):not([type='file']):focus,
+  .premium-discovery select:focus {
+    border-color: var(--theme-accent);
+    box-shadow: 0 0 0 4px var(--theme-glow);
+  }
+
+  .premium-discovery {
+    animation: premium-dialog-enter 220ms ease-out both;
+  }
+
+  .premium-discovery > div:nth-child(3) {
+    scrollbar-width: thin;
+    scrollbar-color: rgb(148 163 184 / 0.45) transparent;
+  }
+}
+
+@layer utilities {
+  /* Utility para texto visualmente escondido mas acessível para leitores de tela */
+  .sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border-width: 0;
+  }
+
+  .sr-only:not(:focus):not(:active) {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border-width: 0;
+  }
+
+  /* Animações reduzidas para usuários que preferem */
+  @media (prefers-reduced-motion: reduce) {
+    * {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+    }
+  }
+}
+
+@keyframes premium-page-enter {
+  from {
+    opacity: 0;
+    transform: translateY(4px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes premium-dialog-enter {
+  from {
+    opacity: 0;
+    filter: saturate(0.85) brightness(0.98);
+  }
+  to {
+    opacity: 1;
+    filter: saturate(1) brightness(1);
+  }
+}
+
+/* Movimento perceptível da marca no login, independente da animação interna do SVG. */
+@keyframes login-brand-float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-8px); }
+}
+.login-brand-animated { animation: login-brand-float 3s ease-in-out infinite; }
+@media (prefers-reduced-motion: reduce) {
+  .login-brand-animated { animation: none; }
+}

@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 620 180" role="img" aria-label="NEXXATI Ativos e Chamados">
+  <defs>
+    <linearGradient id="markBg" x1="54" y1="24" x2="154" y2="124" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#071527"/>
+      <stop offset="0.58" stop-color="#0d2b66"/>
+      <stop offset="1" stop-color="#0ea5e9"/>
+    </linearGradient>
+    <linearGradient id="lineA" x1="66" y1="44" x2="143" y2="124" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#67e8f9"/>
+      <stop offset="0.48" stop-color="#38bdf8"/>
+      <stop offset="1" stop-color="#2563eb"/>
+    </linearGradient>
+    <linearGradient id="lineB" x1="142" y1="34" x2="79" y2="132" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#f8fafc"/>
+      <stop offset="1" stop-color="#93c5fd"/>
+    </linearGradient>
+    <filter id="shadow" x="25" y="0" width="160" height="170" filterUnits="userSpaceOnUse">
+      <feDropShadow dx="0" dy="18" stdDeviation="16" flood-color="#0f172a" flood-opacity="0.18"/>
+    </filter>
+  </defs>
+
+  <g filter="url(#shadow)">
+    <rect x="48" y="26" width="112" height="112" rx="30" fill="url(#markBg)"/>
+    <path d="M72 112V66c0-8 5-13 13-13h6l44 58V54" fill="none" stroke="url(#lineB)" stroke-width="11" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M72 112h19l44-58h-19" fill="none" stroke="url(#lineA)" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M64 82h-13M154 82h13M104 138v14M104 12v14" stroke="#38bdf8" stroke-width="4" stroke-linecap="round"/>
+    <circle cx="51" cy="82" r="5" fill="#22d3ee"/>
+    <circle cx="167" cy="82" r="5" fill="#60a5fa"/>
+    <circle cx="104" cy="12" r="5" fill="#38bdf8"/>
+    <circle cx="104" cy="152" r="5" fill="#60a5fa"/>
+    <path d="M136 44l12-12h14" stroke="#22d3ee" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M72 124l-12 12H46" stroke="#60a5fa" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+  </g>
+
+  <text x="205" y="86" fill="#0f172a" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="52" font-weight="950" letter-spacing="3">NEXXATI</text>
+  <text x="208" y="124" fill="#2563eb" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="16" font-weight="850" letter-spacing="7">ATIVOS E CHAMADOS</text>
+</svg>

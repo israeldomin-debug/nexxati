@@ -1,0 +1,5 @@
+ALTER TYPE "AssetType" ADD VALUE IF NOT EXISTS 'TIME_CLOCK';
+
+ALTER TABLE "assets"
+  ADD COLUMN "is_online" BOOLEAN NOT NULL DEFAULT false,
+  ADD COLUMN "last_online_check_at" TIMESTAMP(3);

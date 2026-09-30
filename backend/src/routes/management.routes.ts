@@ -1,0 +1,25 @@
+import { Router } from 'express';
+import { ManagementController } from '../controllers/management.controller';
+import { authenticateToken, createResourceLimiter, requireAdmin, requireDeletePassword } from '../middlewares';
+
+const router = Router();
+const controller = new ManagementController();
+router.use(authenticateToken, requireAdmin);
+router.get('/overview', controller.overview);
+router.get('/agents', controller.agents);
+router.get('/agents/package', controller.downloadAgent);
+router.delete('/agents/:id', requireDeletePassword, controller.deleteAgent);
+router.get('/terms', controller.terms);
+router.post('/terms', createResourceLimiter, controller.createTerm);
+router.patch('/terms/:id/sign', controller.signTerm);
+router.get('/maintenance', controller.maintenance);
+router.post('/maintenance', createResourceLimiter, controller.createMaintenance);
+router.patch('/maintenance/:id', controller.updateMaintenance);
+router.get('/knowledge', controller.knowledge);
+router.post('/knowledge', createResourceLimiter, controller.createArticle);
+router.patch('/knowledge/:id', controller.updateArticle);
+router.get('/purchases', controller.purchases);
+router.post('/purchases', createResourceLimiter, controller.createPurchase);
+router.post('/purchases/generate', controller.generatePurchases);
+router.patch('/purchases/:id', controller.updatePurchase);
+export default router;

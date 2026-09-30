@@ -1,0 +1,10 @@
+{
+  "apiUrl": "http://localhost:3333/api",
+  "token": "TROQUE-PELO-MESMO-REMOTE_AGENT_TOKEN-DO-BACKEND",
+  "agentName": "Empresa remota",
+  "productName": "IDL Ativos e Chamados",
+  "pollSeconds": 60,
+  "heartbeatSeconds": 60,
+  "inventoryMinutes": 15,
+  "updateMinutes": 15
+}

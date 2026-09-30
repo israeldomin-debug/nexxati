@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 520 150" role="img" aria-label="NEXXATI">
+  <defs>
+    <linearGradient id="nexxati-mark-bg" x1="10" y1="18" x2="122" y2="130" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#081426"/>
+      <stop offset="0.52" stop-color="#0b4aa2"/>
+      <stop offset="1" stop-color="#0ea5e9"/>
+    </linearGradient>
+    <linearGradient id="nexxati-mark-fg" x1="38" y1="34" x2="96" y2="116" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#ffffff"/>
+      <stop offset="1" stop-color="#8ee7ff"/>
+    </linearGradient>
+  </defs>
+  <rect x="10" y="18" width="112" height="112" rx="30" fill="url(#nexxati-mark-bg)"/>
+  <path d="M38 101V48h16l40 43V48h15v53H93L53 58v43H38Z" fill="url(#nexxati-mark-fg)"/>
+  <path d="M42 112h58" fill="none" stroke="#38bdf8" stroke-width="7" stroke-linecap="round"/>
+  <path d="M106 30l9 9-9 9-9-9 9-9Z" fill="#ffffff" opacity=".92"/>
+  <text x="148" y="89" fill="#081426" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="54" font-weight="900" letter-spacing="7">NEXXATI</text>
+  <text x="153" y="117" fill="#64748b" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="17" font-weight="700" letter-spacing="3">ATIVOS E CHAMADOS</text>
+</svg>

@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 560 160" role="img" aria-label="NEXXATI modelo 04">
+  <defs>
+    <linearGradient id="m4a" x1="22" y1="22" x2="134" y2="136" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#020617"/>
+      <stop offset=".5" stop-color="#312e81"/>
+      <stop offset="1" stop-color="#0ea5e9"/>
+    </linearGradient>
+    <linearGradient id="m4b" x1="42" y1="52" x2="112" y2="106" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#e0f2fe"/>
+      <stop offset="1" stop-color="#ffffff"/>
+    </linearGradient>
+  </defs>
+  <rect x="22" y="22" width="116" height="116" rx="58" fill="url(#m4a)"/>
+  <path d="M80 35c25 0 45 20 45 45s-20 45-45 45-45-20-45-45 20-45 45-45Z" fill="none" stroke="#38bdf8" stroke-width="4" stroke-dasharray="8 9"/>
+  <path d="M52 105V55h15l28 31V55h13v50H94L66 74v31H52Z" fill="url(#m4b)"/>
+  <path d="M121 30l8 8-8 8-8-8 8-8Z" fill="#fff"/>
+  <text x="170" y="89" fill="#0b1020" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="55" font-weight="950" letter-spacing="8">NEXXATI</text>
+  <text x="173" y="120" fill="#6366f1" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="15" font-weight="900" letter-spacing="4">SECURE ASSET FLOW</text>
+</svg>

@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="NEXXATI">
+  <defs>
+    <linearGradient id="bg" x1="7" y1="7" x2="57" y2="57" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#111c49"/>
+      <stop offset="1" stop-color="#0b4aa2"/>
+    </linearGradient>
+    <linearGradient id="c1" x1="6" y1="12" x2="31" y2="31" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#23f6df"/>
+      <stop offset="1" stop-color="#38bdf8"/>
+    </linearGradient>
+    <linearGradient id="c2" x1="34" y1="12" x2="58" y2="34" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#fde047"/>
+      <stop offset="1" stop-color="#f59e0b"/>
+    </linearGradient>
+  </defs>
+  <rect width="64" height="64" rx="16" fill="url(#bg)"/>
+  <path d="M25 20h-8v8M17 28h-6M39 20h8v8M47 28h6" stroke="url(#c1)" fill="none" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M25 44h-8v-8M17 36h-6M39 44h8v-8M47 36h6" stroke="url(#c2)" fill="none" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <circle cx="11" cy="28" r="3" fill="#38bdf8"/>
+  <circle cx="53" cy="28" r="3" fill="#f59e0b"/>
+  <circle cx="11" cy="36" r="3" fill="#23f6df"/>
+  <circle cx="53" cy="36" r="3" fill="#fde047"/>
+  <rect x="21" y="21" width="22" height="22" transform="rotate(45 32 32)" fill="#142052" stroke="#ffffff" stroke-width="3"/>
+  <text x="32" y="39" text-anchor="middle" fill="#ffffff" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="21" font-weight="950">N</text>
+</svg>

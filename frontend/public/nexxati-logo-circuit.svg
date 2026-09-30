@@ -1,0 +1,80 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 620 420" role="img" aria-label="NEXXATI Software Solutions">
+  <defs>
+    <linearGradient id="circuit-cyan" x1="120" y1="80" x2="280" y2="230" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#23f6df"/>
+      <stop offset="1" stop-color="#38bdf8"/>
+    </linearGradient>
+    <linearGradient id="circuit-amber" x1="320" y1="80" x2="505" y2="225" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#fde047"/>
+      <stop offset="1" stop-color="#f59e0b"/>
+    </linearGradient>
+    <linearGradient id="circuit-orange" x1="145" y1="210" x2="300" y2="330" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#f97316"/>
+      <stop offset="1" stop-color="#fb923c"/>
+    </linearGradient>
+    <linearGradient id="circuit-blue" x1="330" y1="220" x2="505" y2="330" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#60a5fa"/>
+      <stop offset="1" stop-color="#2563eb"/>
+    </linearGradient>
+    <filter id="soft-glow" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur stdDeviation="2.6" result="blur"/>
+      <feColorMatrix in="blur" type="matrix" values="0 0 0 0 0.11 0 0 0 0 0.72 0 0 0 0 1 0 0 0 .55 0" result="color"/>
+      <feMerge>
+        <feMergeNode in="color"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+    <style>
+      .trace { fill: none; stroke-width: 5; stroke-linecap: round; stroke-linejoin: round; filter: url(#soft-glow); }
+      .node { stroke: #13203f; stroke-width: 4; filter: url(#soft-glow); }
+      .word { font-family: Inter, Segoe UI, Arial, sans-serif; font-weight: 950; letter-spacing: 7px; }
+      .sub { font-family: Inter, Segoe UI, Arial, sans-serif; font-weight: 800; letter-spacing: 13px; }
+    </style>
+  </defs>
+
+  <g transform="translate(0 -10)">
+    <path class="trace" stroke="url(#circuit-cyan)" d="M304 130V82M304 130l-42-42h-34v22m54 40-44-44-36 36h-30m102 28h-74l-30 30h-34m118-50-28-28v-33h28m-5 83h-96m0 0h-30"/>
+    <circle class="node" cx="304" cy="82" r="8" fill="#fde047"/>
+    <circle class="node" cx="228" cy="110" r="8" fill="#23f6df"/>
+    <circle class="node" cx="254" cy="89" r="8" fill="#23f6df"/>
+    <circle class="node" cx="202" cy="142" r="8" fill="#38bdf8"/>
+    <circle class="node" cx="172" cy="142" r="8" fill="#38bdf8"/>
+    <circle class="node" cx="136" cy="200" r="8" fill="#38bdf8"/>
+    <circle class="node" cx="123" cy="228" r="8" fill="#38bdf8"/>
+    <circle class="node" cx="153" cy="228" r="8" fill="#38bdf8"/>
+
+    <path class="trace" stroke="url(#circuit-amber)" d="M336 132V96m0 36 35-35v-34m-15 91 43-43h45v26m-70 35h67l34-34h32m-112 55h87m-37 30h50m-111-63 34 34v35h34"/>
+    <circle class="node" cx="371" cy="63" r="8" fill="#fde047"/>
+    <circle class="node" cx="336" cy="96" r="8" fill="#fde047"/>
+    <circle class="node" cx="444" cy="137" r="8" fill="#fbbf24"/>
+    <circle class="node" cx="507" cy="137" r="8" fill="#fbbf24"/>
+    <circle class="node" cx="482" cy="189" r="8" fill="#fbbf24"/>
+    <circle class="node" cx="532" cy="189" r="8" fill="#f59e0b"/>
+    <circle class="node" cx="495" cy="219" r="8" fill="#f59e0b"/>
+    <circle class="node" cx="512" cy="269" r="8" fill="#f59e0b"/>
+
+    <path class="trace" stroke="url(#circuit-orange)" d="M300 290v49m0-49-34 34v44m-12-100-48 48v39h-30m82-78-34 34h-41v28m52-95-38 38h-52m83 9-30 30"/>
+    <circle class="node" cx="300" cy="339" r="8" fill="#fb923c"/>
+    <circle class="node" cx="266" cy="368" r="8" fill="#fb923c"/>
+    <circle class="node" cx="176" cy="355" r="8" fill="#fb923c"/>
+    <circle class="node" cx="183" cy="339" r="8" fill="#fb923c"/>
+    <circle class="node" cx="145" cy="282" r="8" fill="#fb923c"/>
+    <circle class="node" cx="198" cy="301" r="8" fill="#fb923c"/>
+
+    <path class="trace" stroke="url(#circuit-blue)" d="M340 290v47m0-47 42 42h45v-36m-53-27 38 38h53m-78-58h100m-44 28h64m-121-5 39-39h40v-27"/>
+    <circle class="node" cx="340" cy="337" r="8" fill="#60a5fa"/>
+    <circle class="node" cx="427" cy="296" r="8" fill="#60a5fa"/>
+    <circle class="node" cx="465" cy="307" r="8" fill="#60a5fa"/>
+    <circle class="node" cx="487" cy="249" r="8" fill="#38bdf8"/>
+    <circle class="node" cx="507" cy="277" r="8" fill="#38bdf8"/>
+    <circle class="node" cx="465" cy="206" r="8" fill="#38bdf8"/>
+  </g>
+
+  <g transform="translate(320 205)">
+    <rect x="-55" y="-55" width="110" height="110" transform="rotate(45)" fill="#142052" stroke="#ffffff" stroke-width="7"/>
+    <text x="0" y="20" text-anchor="middle" fill="#ffffff" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="56" font-weight="950">N</text>
+  </g>
+
+  <text class="word" x="310" y="344" text-anchor="middle" fill="#0f172a" font-size="56">NEXXATI</text>
+  <text class="sub" x="310" y="385" text-anchor="middle" fill="#f59e0b" font-size="24">SOFTWARE SOLUTIONS</text>
+</svg>

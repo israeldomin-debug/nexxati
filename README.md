@@ -105,4 +105,3 @@ O `.gitignore` evita novos arquivos sensíveis, mas não remove segredos já pre
 Foram excluídos ambientes reais, dados operacionais, backups, uploads, logs, exportações CSV, dependências, builds, histórico Git, configurações pessoais e instaladores configurados. Os modelos `.env.example` contêm somente instruções e valores substituíveis. As credenciais fictícias dos testes não são credenciais de acesso.
 
 Esta cópia desativa a recuperação por código quando não configurada, remove a chave fixa legada do cofre, carrega o ambiente no bootstrap e usa a identidade NEXXATI no lugar de imagens da empresa original. Essas mudanças são específicas do pacote; a instalação em uso não foi alterada.
-
